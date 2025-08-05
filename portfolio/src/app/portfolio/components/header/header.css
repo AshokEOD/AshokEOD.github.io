@@ -1,0 +1,185 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(6, 6, 8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+section {
+  scroll-margin-top: 200px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 20px;
+  scroll-margin-top: 100px;
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #29bd5d;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.logo-img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  gap: 30px;
+  flex: 1;
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  color: rgb(253, 254, 255);
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.header a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  color: rgb(253, 254, 255);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-decoration: none;
+  color: rgb(253, 254, 255);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.default-active {
+  color: #29bd5d !important;
+  transform: scale(1.1) !important;
+  font-weight: 600 !important;
+}
+
+.nav-link:hover {
+  color: #29bd5d;
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+.nav-link.default-active:hover {
+  color: #29bd5d !important;
+  transform: scale(1.1) !important;
+}
+
+.separator {
+  color: rgb(253, 254, 255);
+}
+
+.number {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #29bd5d;
+}
+
+.number i {
+  margin-right: 6px;
+  color: rgb(253, 254, 255);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #29bd5d;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+  }
+  .logo-img {
+    height: 40px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.8s ease, opacity 0.6s ease, transform 0.6s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(6, 6, 8);
+    padding: 0 20px;
+    z-index: 999;
+    gap: 10px;
+    border-top: 1px solid #4444441f;
+  }
+
+  .nav-link {
+    font-size: 12px !important;
+    padding: 2px 0;
+  }
+
+  .nav-links.show {
+    max-height: 180px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 30px 20px;
+  }
+
+  .hamburger {
+    display: block;
+    padding: 20px;
+  }
+}
